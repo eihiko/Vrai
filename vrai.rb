@@ -1,5 +1,7 @@
 
 module EnglishFluent
+  require 'linguistics'
+  
   def _split(english)
     english.delete!("\n")
     sentences = english.scan(/[^\.?\??!?;?]+[\.?\??!?;?]*/)
@@ -8,10 +10,20 @@ module EnglishFluent
     return sentences
   end
 
-  def _compile(clause)
+  def _cache(clause)
     
   end
 
+end
+
+class Clause
+end
+
+class Word
+  @text
+  def initialize(word)
+    @text = word
+  end
 end
 
 class Apple
